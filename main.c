@@ -19,10 +19,11 @@
      
   }
   
-   void print_threetimes(const char *s) {
-    printf("%s\n",s);
-    printf("%s\n",s);
-    printf("%s\n",s);
+   void print_ntimes(const char *s, int n) {
+     if (n>=1){
+      printf("%s\n",s);
+      print_ntimes(s, n-1);
+     }
     return;
   }
 
@@ -31,6 +32,6 @@
    int n = atoi(readline("Enter an int: "));
    printf("sum is %d.\n",sum_n(n));
    char *s = readline("Enter a string: ");
-   print_threetimes(s);
+   print_ntimes(s, n);
 
  }
